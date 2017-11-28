@@ -25,21 +25,13 @@ repositories {
 
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
 	compile 'org.springframework.boot:spring-boot-starter-web'
 
+	testCompile 'org.codehaus.groovy:groovy-all:2.4.7'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
     testCompile 'org.spockframework:spock-spring:1.1-groovy-2.4'
     testCompile 'io.rest-assured:spring-mock-mvc:3.0.6'
     testRuntime 'cglib:cglib-nodep:3.2.4'
-}
-
-
-idea {
-    module {
-        inheritOutputDirs = false
-        outputDir = file("$buildDir/classes/main/")
-    }
 }
